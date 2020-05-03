@@ -15,3 +15,7 @@ const start = async () => {
     await provider.enable()
 }
 
+const check = async() => {
+    window.alert(provider.isConnected())
+}
+
