@@ -1,8 +1,10 @@
 let web3_127
+let authereum
+let provider
 
 window.onload = async ()=>{
-    const authereum = new Authereum('mainnet')
-    const provider = authereum.getProvider()
+    authereum = new Authereum('mainnet')
+    provider = authereum.getProvider()
     web3_127 = new Web3(provider)
     console.log(web3_127.version)
 
