@@ -26,11 +26,11 @@ const check = async() => {
 }
 
 const nav_hidari = () => {
-    document.getElementById('nav').style = "position: absolute; bottom: 0px; right: 0px; width: 20%; transform: scale(-1, 1);"
+    document.getElementById('navimg').style = "position: absolute; bottom: 0px; right: 0px; width: 20%; transform: scale(-1, 1);"
 }
 
 const nav_migi = () => {
-    document.getElementById('nav').style = "position: absolute; bottom: 0px; right: 0px; width: 20%; transform: scale(1, 1);"
+    document.getElementById('navimg').style = "position: absolute; bottom: 0px; right: 0px; width: 20%; transform: scale(1, 1);"
 }
 
 const nav_waiting = () => {
