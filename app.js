@@ -5,11 +5,11 @@ window.onload = async ()=>{
     const provider = authereum.getProvider()
     web3_127 = new Web3(provider)
     console.log(web3_127.version)
-    await provider.enable()
 
 }
 
 const start = () => {
-    window.alert("testo")
+    window.alert("初回起動約1分の時間がかかります")
+    await provider.enable()
 }
 
