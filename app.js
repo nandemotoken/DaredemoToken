@@ -21,11 +21,11 @@ const check = async() => {
     window.alert(provider.isConnected())
 }
 
-const reverse_nav = () => {
+const nav_migi = () => {
     document.getElementById('nav').style = "position: absolute; bottom: 0px; right: 0px; width: 20%; transform: scale(-1, 1);"
 }
 
-const default_nav = () => {
+const nav_hidari = () => {
     document.getElementById('nav').style = "position: absolute; bottom: 0px; right: 0px; width: 20%; transform: scale(1, 1);"
 }
 
