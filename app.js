@@ -31,7 +31,7 @@ const nav_migi = () => {
 }
 
 const nav_waiting = () => {
-    setInterval(nav_migi,500)
-    setInterval(nav_hidari,1000)
+    setTimeout(nav_migi,500)
+    setTimeout(nav_hidari,1000)
 }
 
