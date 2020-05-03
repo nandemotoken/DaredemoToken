@@ -47,3 +47,7 @@ const add_token_table = ()=>{
     newRow.insertCell().appendChild(document.createTextNode('トークン名'))
     newRow.insertCell().appendChild(document.createTextNode(100))
 }
+
+const make_token = ()=>{
+    window.alert("make token")
+}
