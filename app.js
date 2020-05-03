@@ -8,7 +8,7 @@ window.onload = async ()=>{
 
 }
 
-const start = () => {
+const start = async () => {
     window.alert("初回起動約1分の時間がかかります")
     await provider.enable()
 }
