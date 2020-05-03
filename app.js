@@ -12,7 +12,7 @@ window.onload = async ()=>{
 
 const start = async () => {
     // window.alert("初回起動約1分の時間がかかります")
-    
+    document.getElementById('reg').src = "./button_start2.png"
     await provider.enable()
     document.getElementById('chk').style.visibility = "visible"
 }
