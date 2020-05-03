@@ -21,3 +21,12 @@ const check = async() => {
     window.alert(provider.isConnected())
 }
 
+const reverse_nav = () => {
+    document.getElementById('nav').style = "position: absolute; bottom: 0px; right: 0px; width: 20%; transform: scale(-1, 1);"
+}
+
+const default_nav = () => {
+    document.getElementById('nav').style = "position: absolute; bottom: 0px; right: 0px; width: 20%; transform: scale(1, 1);"
+}
+
+
