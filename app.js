@@ -49,5 +49,5 @@ const add_token_table = ()=>{
 }
 
 const make_token = ()=>{
-    window.alert("make token")
+    window.alert(document.getElementById('token_name').innerText)
 }
