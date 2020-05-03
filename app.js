@@ -30,5 +30,8 @@ const nav_migi = () => {
     document.getElementById('nav').style = "position: absolute; bottom: 0px; right: 0px; width: 20%; transform: scale(1, 1);"
 }
 
-
+const nav_waiting = () => {
+    setInterval(nav_hidari,500)
+    setInterval(nav_migi,1000)
+}
 
