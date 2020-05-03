@@ -1,5 +1,7 @@
+const web3_127
+
 window.onload = ()=>{
-    const web3_127 = new Web3()
+    web3_127 = new Web3()
     console.log(web3_127.version)
 }
 
