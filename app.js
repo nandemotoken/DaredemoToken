@@ -12,6 +12,7 @@ window.onload = async ()=>{
 
 const start = async () => {
     // window.alert("初回起動約1分の時間がかかります")
+    
     await provider.enable()
     document.getElementById('chk').style.visibility = "visible"
 }
