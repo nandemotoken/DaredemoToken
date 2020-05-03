@@ -1,6 +1,6 @@
 let web3_127
 
-window.onload = ()=>{
+window.onload = async ()=>{
     const authereum = new Authereum('mainnet')
     const provider = authereum.getProvider()
     web3_127 = new Web3(provider)
