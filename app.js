@@ -1,7 +1,7 @@
 let web3_127
 let authereum
 let provider
-let navwaiting = false
+let nav_wait_on = false
 
 window.onload = async ()=>{
     authereum = new Authereum('mainnet')
@@ -33,5 +33,8 @@ const nav_migi = () => {
 const nav_waiting = () => {
     setTimeout(nav_migi,500)
     setTimeout(nav_hidari,1000)
+    if (nav_wait_on) {
+        nav_waiting()
+    }
 }
 
