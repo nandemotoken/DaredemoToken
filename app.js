@@ -7,11 +7,11 @@ window.onload = async ()=>{
     provider = authereum.getProvider()
     web3_127 = new Web3(provider)
     console.log(web3_127.version)
-
+    document.getElementById('reg').style.visibility = "visible"
 }
 
 const start = async () => {
-    window.alert("初回起動約1分の時間がかかります")
+    // window.alert("初回起動約1分の時間がかかります")
     await provider.enable()
     document.getElementById('chk').style.visibility = "visible"
 }
