@@ -33,7 +33,5 @@ const nav_migi = () => {
 const nav_waiting = () => {
     setInterval(nav_migi,500)
     setInterval(nav_hidari,1000)
-    setInterval(nav_migi,1500)
-    setInterval(nav_hidari,2000)
 }
 
