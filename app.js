@@ -20,6 +20,8 @@ const start = async () => {
     await provider.enable()
     nav_wait_on = false
     document.getElementById('chk').style.visibility = "visible"
+    document.getElementById('navtxt').innerText = "トークン名を入力して作成ボタンを押す"
+    document.getElementById('make').style.visibility = "visible"
 }
 
 const check = async() => {
