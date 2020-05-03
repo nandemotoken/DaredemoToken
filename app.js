@@ -33,8 +33,6 @@ const nav_migi = () => {
 const nav_waiting = () => {
     setTimeout(nav_migi,500)
     setTimeout(nav_hidari,1000)
-    if (nav_wait_on) {
-        nav_waiting()
-    }
+    setTimeout( () => {if (nav_wait_on) {nav_waiting()}}, 1000)
 }
 
