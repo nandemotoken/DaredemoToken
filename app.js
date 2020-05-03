@@ -1,6 +1,7 @@
 let web3_127
 let authereum
 let provider
+let navwaiting = false
 
 window.onload = async ()=>{
     authereum = new Authereum('mainnet')
@@ -21,12 +22,13 @@ const check = async() => {
     window.alert(provider.isConnected())
 }
 
-const nav_migi = () => {
+const nav_hidari = () => {
     document.getElementById('nav').style = "position: absolute; bottom: 0px; right: 0px; width: 20%; transform: scale(-1, 1);"
 }
 
-const nav_hidari = () => {
+const nav_migi = () => {
     document.getElementById('nav').style = "position: absolute; bottom: 0px; right: 0px; width: 20%; transform: scale(1, 1);"
 }
+
 
 
