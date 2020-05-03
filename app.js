@@ -40,3 +40,8 @@ const nav_waiting = () => {
     setTimeout( () => {if (nav_wait_on) {nav_waiting()}}, 1000)
 }
 
+const add_token_table = ()=>{
+    const newRow = document.getElementById('token_table').insertRow()
+    newRow.insertCell().appendChild(document.createTextNode('トークン名あ'))
+    newRow.insertCell().appendChild(document.createTextNode(10))
+}
