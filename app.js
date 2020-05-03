@@ -6,6 +6,6 @@ window.onload = ()=>{
 }
 
 const start = () => {
-    alert("testo")
+    window.alert("testo")
 }
 
