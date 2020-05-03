@@ -42,6 +42,6 @@ const nav_waiting = () => {
 
 const add_token_table = ()=>{
     const newRow = document.getElementById('token_table').insertRow()
-    newRow.insertCell().appendChild(document.createTextNode('トークン名あ'))
-    newRow.insertCell().appendChild(document.createTextNode(10))
+    newRow.insertCell().appendChild(document.createTextNode('トークン名'))
+    newRow.insertCell().appendChild(document.createTextNode(100))
 }
