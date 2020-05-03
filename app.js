@@ -1,4 +1,4 @@
-const web3_127
+let web3_127
 
 window.onload = ()=>{
     web3_127 = new Web3()
