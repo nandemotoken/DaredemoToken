@@ -1,36 +1,52 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>だれでもトークン</title>
     <link rel="shotcut icon" href="./favicon.ico">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
+
 <body style="margin-bottom: 20%;">
     <div style="position: absolute; bottom: 0px; left: 0px; width: 80%;">
         <h4 id="navtxt" style="text-align: center;">ここに操作のヒントが表示されます</h4>
     </div>
-    <img id="navimg" src="./sugoi_chang.png" alt="ナビゲーター：すごいちゃん" style="position: absolute; bottom: 0px; right: 0px; width: 20%; transform: scale(-1, 1);">
+    <img id="navimg" src="./sugoi_chang.png" alt="ナビゲーター：すごいちゃん"
+        style="position: absolute; bottom: 0px; right: 0px; width: 20%; transform: scale(-1, 1);">
     <img src="./Daredemotoken_banner.png" alt="バナー" style="width:100%;">
 
-    <h1>だれでもトークン</h1>
-    <div>
-        <img id="reg" onclick="start()" src="./button_start1.png" style="visibility:hidden; width: 30%;">
-        <div id="token_name_space" style="visibility:hidden; width: 30%;">
-            <p>作成するトークンの名前</p>
-            <input type="text" name="token_name_input" id="token_name">
+    <div class="container">
+        <h1>だれでもトークン</h1>
+        <div class="row">
+            <img id="reg" onclick="start()" src="./button_start1.png" style="visibility:hidden; width: 30%;">
+            <div id="token_name_space" style="visibility:hidden; width: 30%;">
+                <p>作成するトークンの名前</p>
+                <input type="text" name="token_name_input" id="token_name">
+            </div>
         </div>
+        <img id="make" onclick="make_token()" src="./cooking_sweets_konpeitou.png"
+            style="visibility:hidden; width: 30%;">
+        <br>
+        あなたのトークン
+        <table id="token_table" border="2"></table>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/web3@1.2.7/dist/web3.min.js"
+            integrity="sha256-9rSwSMn4GDjf9FcHmJSvdiKGrk+mNIUmM4ltFDu3MUU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/authereum@0.0.4-beta.133/authereum.js"
+            integrity="sha256-iWIb+1y61bVwONfBHWAcpHktjFjjs9/7fj6aEeSI9iA=" crossorigin="anonymous"></script>
+        <script src="./app.js"></script>
     </div>
-    <img id="make" onclick="make_token()" src="./cooking_sweets_konpeitou.png" style="visibility:hidden; width: 30%;">
-    <br>
-    あなたのトークン
-    <table id="token_table" border="2"></table>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/web3@1.2.7/dist/web3.min.js" integrity="sha256-9rSwSMn4GDjf9FcHmJSvdiKGrk+mNIUmM4ltFDu3MUU=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/authereum@0.0.4-beta.133/authereum.js" integrity="sha256-iWIb+1y61bVwONfBHWAcpHktjFjjs9/7fj6aEeSI9iA=" crossorigin="anonymous"></script>
-    <script src="./app.js"></script>
 </body>
+
 </html>
