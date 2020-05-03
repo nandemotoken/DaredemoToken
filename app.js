@@ -9,7 +9,7 @@ window.onload = async ()=>{
     web3_127 = new Web3(provider)
     console.log(web3_127.version)
     document.getElementById('reg').style.visibility = "visible"
-    document.getElementById('navtxt').innerText = "STARTボタンを押してユーザ登録をしましょう(完全無料)"
+    document.getElementById('navtxt').innerText = "STARTボタンを押してユーザ登録(完全無料)"
 }
 
 const start = async () => {
