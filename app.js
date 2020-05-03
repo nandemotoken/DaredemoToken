@@ -13,8 +13,8 @@ window.onload = async ()=>{
 }
 
 const start = async () => {
-    // window.alert("初回起動約1分の時間がかかります")
     document.getElementById('reg').src = "./button_start2.png"
+    document.getElementById('navtxt').innerText = "リンク先にメールアドレスとパスワードを登録下さい"
     nav_wait_on = true
     nav_waiting()
     await provider.enable()
