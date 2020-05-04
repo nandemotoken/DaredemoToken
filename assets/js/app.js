@@ -3,7 +3,7 @@ let authereum
 let provider
 let nav_wait_on = false
 let myaddress
-
+const tokenAddresses = []
 
 
 window.onload = async ()=>{
@@ -34,7 +34,11 @@ const displayTokenList = async () => {
     // console.log(d)
     // console.log(d.result)
     // d.result.forEach( e => console.log(e))
-    d.result.forEach( e => console.log(e.contractAddress))
+    // d.result.forEach( e => console.log(e.contractAddress))
+    d.result.forEach( e => {
+        tokenAddresses.push(e.contractAddress)
+        console.log(e.contractAddress)
+    })
     t()
 }
 
