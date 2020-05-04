@@ -51,7 +51,7 @@ const displayTokenList = async () => {
         // console.log(g)
         // console.log(contractSymbolMap[myTokenContractInfo])
         console.log(contractDecimalMap[myTokenContractInfo])
-        console.log(g.result/ Math.pow( 10, contractDecimalMap[myTokenContractInfo])
+        console.log(g.result/ Math.pow( 10, contractDecimalMap[myTokenContractInfo]) )
     } )
     t()
 }
