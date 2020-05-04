@@ -42,10 +42,14 @@ const nav_waiting = () => {
     setTimeout( () => {if (nav_wait_on) {nav_waiting()}}, 1000)
 }
 
-const add_token_table = ()=>{
+const t = ()=>{
+    add_token_table('トークン名',100)
+}
+
+const add_token_table = (t_name,t_count)=>{
     const newRow = document.getElementById('token_table').insertRow()
-    newRow.insertCell().appendChild(document.createTextNode('トークン名'))
-    newRow.insertCell().appendChild(document.createTextNode(100))
+    newRow.insertCell().appendChild(document.createTextNode(t_name))
+    newRow.insertCell().appendChild(document.createTextNode(t_count))
 }
 
 const make_token = ()=>{
