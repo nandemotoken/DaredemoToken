@@ -2,6 +2,7 @@ let web3_127
 let authereum
 let provider
 let nav_wait_on = false
+let myaddress
 
 window.onload = async ()=>{
     authereum = new Authereum('mainnet')
@@ -22,7 +23,16 @@ const start = async () => {
     document.getElementById('token_name_space').style.visibility = "visible"
     document.getElementById('navtxt').innerText = "トークン名を入力して作成ボタンを押す"
     document.getElementById('make').style.visibility = "visible"
+    myaddress = await authereum.getAccountAddress()
+    displayTokenList()
 }
+
+const displayTokenList = async () => {
+    t()
+    t()
+    t()
+}
+
 
 const check = async() => {
     window.alert(provider.isConnected())
