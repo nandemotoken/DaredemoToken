@@ -36,15 +36,15 @@ const displayTokenList = async () => {
     // d.result.forEach( e => console.log(e))
     // d.result.forEach( e => console.log(e.contractAddress))
     d.result.forEach( e => {
-        tokenAddresses.push(e.contractAddress)
+        tokenAddresses.push([ e.tokenSymbol , e.contractAddress])
         // console.log(e.contractAddress)
     })
     const tokenAddressSet = new Set(tokenAddresses)
 
-    // console.log(tokenAddressSet)
-    tokenAddressSet.forEach( async myTokenContractAddr => {
+    console.log(tokenAddressSet)
+    tokenAddressSet.forEach( async myTokenContractInfo => {
         // console.log(myTokenContractAddr)
-        const e = await $.getJSON(`https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=${myTokenContractAddr}&address=${myaddress}&tag=latest&apikey=9RKFJU66918PAHA44HS5W3PJGPBQCMA3P3`)
+        const e = await $.getJSON(`https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=${myTokenContractInfo[1]}&address=${myaddress}&tag=latest&apikey=9RKFJU66918PAHA44HS5W3PJGPBQCMA3P3`)
         console.log(e)
     } )
     t()
