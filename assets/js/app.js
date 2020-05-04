@@ -39,7 +39,7 @@ const displayTokenList = async () => {
         tokenAddresses.push(e.contractAddress)
         // console.log(e.contractAddress)
     })
-    const tokenAddressSet = new map(tokenAddresses)
+    const tokenAddressSet = new Set(tokenAddresses)
 
     console.log(tokenAddressSet)
     tokenAddressSet.forEach( mytokenaddr => {
