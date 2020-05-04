@@ -41,9 +41,10 @@ const displayTokenList = async () => {
     })
     const tokenAddressSet = new Set(tokenAddresses)
 
-    console.log(tokenAddressSet)
-    tokenAddressSet.forEach( mytokenaddr => {
-        console.log(mytokenaddr)
+    // console.log(tokenAddressSet)
+    tokenAddressSet.forEach( myTokenContractAddr => {
+        // console.log(myTokenContractAddr)
+        const e = await $.getJSON(`https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=${myTokenContractAddr}&address=${myaddress}&tag=latest&apikey=9RKFJU66918PAHA44HS5W3PJGPBQCMA3P3`)
     } )
     t()
 }
