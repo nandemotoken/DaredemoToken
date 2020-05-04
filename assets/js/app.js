@@ -50,10 +50,11 @@ const displayTokenList = async () => {
         const g = await $.getJSON(`https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=${myTokenContractInfo}&address=${myaddress}&tag=latest&apikey=9RKFJU66918PAHA44HS5W3PJGPBQCMA3P3`)
         // console.log(g)
         // console.log(contractSymbolMap[myTokenContractInfo])
-        console.log(contractDecimalMap[myTokenContractInfo])
-        console.log(g.result/ Math.pow( 10, contractDecimalMap[myTokenContractInfo]) )
+        // console.log(contractDecimalMap[myTokenContractInfo])
+        // console.log(g.result/ Math.pow( 10, contractDecimalMap[myTokenContractInfo]) )
+        add_token_table( contractSymbolMap[myTokenContractInfo] , g.result/ Math.pow( 10, contractDecimalMap[myTokenContractInfo]) )
     } )
-    t()
+    // t()
 }
 
 
