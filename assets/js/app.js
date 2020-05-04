@@ -37,8 +37,14 @@ const displayTokenList = async () => {
     // d.result.forEach( e => console.log(e.contractAddress))
     d.result.forEach( e => {
         tokenAddresses.push(e.contractAddress)
-        console.log(e.contractAddress)
+        // console.log(e.contractAddress)
     })
+    const tokenAddressSet = new map(tokenAddresses)
+
+    console.log(tokenAddressSet)
+    tokenAddressSet.forEach( mytokenaddr => {
+        console.log(mytokenaddr)
+    } )
     t()
 }
 
