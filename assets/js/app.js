@@ -32,7 +32,7 @@ const start = async () => {
 const displayTokenList = async () => {
     const d = await $.getJSON(`https://api.etherscan.io/api?module=account&action=tokentx&address=${myaddress}&startblock=0&endblock=999999999&sort=asc&apikey=9RKFJU66918PAHA44HS5W3PJGPBQCMA3P3`)
     console.log(d)
-    console.log(d.responseJSON.result)
+    console.log(d.result)
     t()
 }
 
