@@ -4,6 +4,7 @@ let provider
 let nav_wait_on = false
 let myaddress
 const tokenAddresses = []
+const contractSymbolMap = {}
 
 
 window.onload = async ()=>{
@@ -36,7 +37,8 @@ const displayTokenList = async () => {
     // d.result.forEach( e => console.log(e))
     // d.result.forEach( e => console.log(e.contractAddress))
     d.result.forEach( e => {
-        tokenAddresses.push([ e.tokenSymbol , e.contractAddress])
+        tokenAddresses.push(e.contractAddress)
+        contractSymbolMap[e.contractAddress] = e.tokenSymbol
         // console.log(e.contractAddress)
     })
     const tokenAddressSet = new Set(tokenAddresses)
@@ -44,8 +46,9 @@ const displayTokenList = async () => {
     console.log(tokenAddressSet)
     tokenAddressSet.forEach( async myTokenContractInfo => {
         // console.log(myTokenContractAddr)
-        const e = await $.getJSON(`https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=${myTokenContractInfo[1]}&address=${myaddress}&tag=latest&apikey=9RKFJU66918PAHA44HS5W3PJGPBQCMA3P3`)
-        console.log(e)
+        const g = await $.getJSON(`https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=${myTokenContractInfo}&address=${myaddress}&tag=latest&apikey=9RKFJU66918PAHA44HS5W3PJGPBQCMA3P3`)
+        console.log(g)
+        console.log(contractSymbolMap[myTokenContractInfo])
     } )
     t()
 }
