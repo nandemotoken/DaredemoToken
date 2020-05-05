@@ -94,9 +94,10 @@ const delete_token_table = () => {
 }
 
 const make_token = async ()=>{
-    window.alert(document.getElementById('token_name').value)
+    let ans = window.confirm(`${document.getElementById('token_name').value}を作成します`)
+    if  (ans) {
     await makeToken( document.getElementById('token_name').value , "DT" )
-
+}
 }
 
 const abi = [
