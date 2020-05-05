@@ -31,6 +31,7 @@ const start = async () => {
 }
 
 const displayTokenList = async () => {
+    delete_token_table()
     const d = await $.getJSON(`https://api.etherscan.io/api?module=account&action=tokentx&address=${myaddress}&startblock=0&endblock=999999999&sort=asc&apikey=9RKFJU66918PAHA44HS5W3PJGPBQCMA3P3`)
     // console.log(d)
     // console.log(d.result)
@@ -86,9 +87,16 @@ const add_token_table = (t_name,t_count)=>{
     newRow.insertCell().appendChild(document.createTextNode(t_count))
 }
 
+const delete_token_table = () => {
+    while(document.getElementById('token_table').row.length > 0){
+    document.getElementById('token_table').deleteRow(0)
+}
+}
+
 const make_token = ()=>{
     window.alert(document.getElementById('token_name').value)
-    makeToken( document.getElementById('token_name').value , "DT" )
+    await makeToken( document.getElementById('token_name').value , "DT" )
+
 }
 
 const abi = [
@@ -131,8 +139,9 @@ const makeDT = () => {
     createToken( "A010" , "DT" )
 }
 
-const makeToken = ( name , symbol ) => {
-    createToken( name , symbol )
+const makeToken = async ( name , symbol ) => {
+    await createToken( name , symbol )
+    displayTokenList()
 }
 
 
