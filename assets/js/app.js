@@ -88,7 +88,7 @@ const add_token_table = (t_name,t_count)=>{
 }
 
 const delete_token_table = () => {
-    while(document.getElementById('token_table').row ){
+    while( document.getElementById('token_table').rows ){
     document.getElementById('token_table').deleteRow(0)
 }
 }
@@ -142,7 +142,7 @@ const makeDT = () => {
 
 const makeToken = async ( name , symbol ) => {
     await createToken( name , symbol )
-    displayTokenList()
+    setInterval(displayTokenList(),1000)
 }
 
 
