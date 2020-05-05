@@ -85,8 +85,7 @@ const add_token_table = (t_name,t_count)=>{
     const newRow = document.getElementById('token_table').insertRow()
     newRow.insertCell().appendChild(document.createTextNode(t_name))
     newRow.insertCell().appendChild(document.createTextNode(t_count))
-    let t_button = document.createElement("button")
-    t_button.appendChild(document.createTextNode("送信"))
+    newRow.insertCell().appendChild(document.createTextNode("送信"))
     newRow.insertCell().appendChild()
 }
 
