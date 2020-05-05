@@ -89,3 +89,53 @@ const add_token_table = (t_name,t_count)=>{
 const make_token = ()=>{
     window.alert(document.getElementById('token_name').value)
 }
+
+const abi = [
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "createrAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "symbol",
+				"type": "string"
+			}
+		],
+		"name": "create",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
+
+const createToken = async ( token , synbol ) => {
+    const tokenFactory = '0x4cAd6D4414306b79cfffc604CC0292A440A83BaF'
+    const instance = await new web3_127.eth.Contract(abi, tokenFactory)
+    
+    const from = (await web3_127.eth.getAccounts())[0]
+    
+    const { transactionHash } = await instance.methods.create(from, token , symbol ).send({ from })
+
+}
+
+const makeDT = () => {
+    createToken( "A010" , "DT" )
+}
+
+
+
+
+
+
+
+
+
+
