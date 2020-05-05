@@ -142,10 +142,21 @@ const makeDT = () => {
 
 const makeToken = async ( name , symbol ) => {
     await createToken( name , symbol )
-    setInterval(displayTokenList(),1000)
+    refleshTokenList()
 }
 
-
+const refleshTokenList = () =>{
+    setTimeoutl(displayTokenList(),5000)
+    setTimeoutl(displayTokenList(),10000)
+    setTimeoutl(displayTokenList(),15000)
+    setTimeoutl(displayTokenList(),20000)
+    setTimeoutl(displayTokenList(),25000)
+    setTimeoutl(displayTokenList(),30000)
+    setTimeoutl(displayTokenList(),35000)
+    setTimeoutl(displayTokenList(),40000)
+    setTimeoutl(displayTokenList(),45000)
+    setTimeoutl(displayTokenList(),50000)
+}
 
 
 
