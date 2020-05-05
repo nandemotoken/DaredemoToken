@@ -85,6 +85,9 @@ const add_token_table = (t_name,t_count)=>{
     const newRow = document.getElementById('token_table').insertRow()
     newRow.insertCell().appendChild(document.createTextNode(t_name))
     newRow.insertCell().appendChild(document.createTextNode(t_count))
+    let t_button = document.createElement("button")
+    t_button.appendChild(document.createTextNode("送信"))
+    newRow.insertCell().appendChild()
 }
 
 const delete_token_table = () => {
@@ -144,10 +147,11 @@ const makeDT = () => {
 const makeToken = async ( name , symbol ) => {
     await createToken( name , symbol )
     refleshTokenList()
+    document.getElementById('navtxt').innerText = "2分ほど待つと作成したトークンが画面に反映されます"
 }
 
 const refleshTokenList = () =>{
-    for (let i in [6,12,18,30,60]){
+    for (let i in [6,12,18,24,36,48,60]){
         setTimeout(() => {
             displayTokenList()
         }, i*5000);        
