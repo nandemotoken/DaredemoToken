@@ -146,34 +146,10 @@ const makeToken = async ( name , symbol ) => {
 }
 
 const refleshTokenList = () =>{
-    setTimeoutl(displayTokenList(),5000)
-    setTimeoutl(displayTokenList(),10000)
-    setTimeoutl(displayTokenList(),15000)
-    setTimeoutl(displayTokenList(),20000)
-    setTimeoutl(displayTokenList(),25000)
-    setTimeoutl(displayTokenList(),30000)
-    setTimeoutl(displayTokenList(),35000)
-    setTimeoutl(displayTokenList(),40000)
-    setTimeoutl(displayTokenList(),45000)
-    setTimeoutl(displayTokenList(),50000)
-    setTimeoutl(displayTokenList(),55000)
-    setTimeoutl(displayTokenList(),60000)
-    setTimeoutl(displayTokenList(),65000)
-    setTimeoutl(displayTokenList(),70000)
-    setTimeoutl(displayTokenList(),75000)
-    setTimeoutl(displayTokenList(),80000)
-    setTimeoutl(displayTokenList(),85000)
-    setTimeoutl(displayTokenList(),90000)
-    setTimeoutl(displayTokenList(),95000)
-    setTimeoutl(displayTokenList(),100000)
-    setTimeoutl(displayTokenList(),105000)
-    setTimeoutl(displayTokenList(),110000)
-    setTimeoutl(displayTokenList(),115000)
-    setTimeoutl(displayTokenList(),120000)
+    for (let i in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,30,40,50,100,150,200,300]){
+        setTimeout(() => {
+            displayTokenList()
+        }, i*5000);        
+    }
 }
-
-
-
-
-
 
