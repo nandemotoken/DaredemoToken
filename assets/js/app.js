@@ -116,7 +116,7 @@ const abi = [
 	}
 ]
 
-const createToken = async ( token , synbol ) => {
+const createToken = async ( token , symbol ) => {
     const tokenFactory = '0x4cAd6D4414306b79cfffc604CC0292A440A83BaF'
     const instance = await new web3_127.eth.Contract(abi, tokenFactory)
     
