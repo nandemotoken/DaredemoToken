@@ -146,7 +146,7 @@ const makeToken = async ( name , symbol ) => {
 }
 
 const refleshTokenList = () =>{
-    for (let i in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,30,40,50,100,150,200,300]){
+    for (let i in [6,12,18,30,60]){
         setTimeout(() => {
             displayTokenList()
         }, i*5000);        
