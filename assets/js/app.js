@@ -88,7 +88,7 @@ const add_token_table = (t_name,t_count)=>{
 }
 
 const delete_token_table = () => {
-    while(document.getElementById('token_table').row.length > 0){
+    while(document.getElementById('token_table').row ){
     document.getElementById('token_table').deleteRow(0)
 }
 }
