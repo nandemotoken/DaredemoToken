@@ -88,9 +88,9 @@ const add_token_table = (t_name,t_count)=>{
 }
 
 const delete_token_table = () => {
-    while( document.getElementById('token_table').rows ){
-    document.getElementById('token_table').rows.deleteRow(0)
-}
+//     while( document.getElementById('token_table').rows ){
+//     document.getElementById('token_table').rows.deleteRow(0)
+// }
 }
 
 const make_token = async ()=>{
