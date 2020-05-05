@@ -93,7 +93,7 @@ const delete_token_table = () => {
 }
 }
 
-const make_token = ()=>{
+const make_token = async ()=>{
     window.alert(document.getElementById('token_name').value)
     await makeToken( document.getElementById('token_name').value , "DT" )
 
