@@ -4,7 +4,7 @@ let provider
 let nav_wait_on = false
 let myaddress
 const tokenAddresses = []
-const contractSymbolMap = {}
+const contractNameMap = {}
 const contractDecimalMap = {}
 
 window.onload = async ()=>{
@@ -38,7 +38,7 @@ const displayTokenList = async () => {
     // d.result.forEach( e => console.log(e.contractAddress))
     d.result.forEach( e => {
         tokenAddresses.push(e.contractAddress)
-        contractSymbolMap[e.contractAddress] = e.tokenSymbol
+        contractNameMap[e.contractAddress] = e.tokenName
         contractDecimalMap[e.contractAddress] = e.tokenDecimal
         // console.log(e.contractAddress)
     })
@@ -52,7 +52,7 @@ const displayTokenList = async () => {
         // console.log(contractSymbolMap[myTokenContractInfo])
         // console.log(contractDecimalMap[myTokenContractInfo])
         // console.log(g.result/ Math.pow( 10, contractDecimalMap[myTokenContractInfo]) )
-        add_token_table( contractSymbolMap[myTokenContractInfo] , g.result/ Math.pow( 10, contractDecimalMap[myTokenContractInfo]) )
+        add_token_table( contractNameMap[myTokenContractInfo] , g.result/ Math.pow( 10, contractDecimalMap[myTokenContractInfo]) )
     } )
     // t()
 }
@@ -88,6 +88,7 @@ const add_token_table = (t_name,t_count)=>{
 
 const make_token = ()=>{
     window.alert(document.getElementById('token_name').value)
+    makeToken( document.getElementById('token_name').value , "DT" )
 }
 
 const abi = [
@@ -130,7 +131,9 @@ const makeDT = () => {
     createToken( "A010" , "DT" )
 }
 
-
+const makeToken = ( name , symbol ) => {
+    createToken( name , symbol )
+}
 
 
 
