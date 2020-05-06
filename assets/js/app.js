@@ -185,7 +185,7 @@ const ensaddress = () => {
     addarea.select()
     document.execCommand("copy")
     document.getElementsByTagName("body")[0].removeChild(addarea)
-    const ans = window.confirm("クリップボードにアドレスをコピーしました\n※メールアドレスのように使えます\n\n詳細情報を表示しますか？")
+    const ans = window.confirm("クリップボードにアドレスをコピーしました\n※メールアドレスのように使えます\n\nブロックチェーン情報を表示しますか？")
     if (ans) {
         window.open(`https://etherscan.io/address/${myaddress}#tokentxns`, '_blank')        
     }
