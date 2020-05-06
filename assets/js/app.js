@@ -35,7 +35,7 @@ const start = async () => {
     my_ens_addr = userinfo.account.username + '.auth.eth'
     document.getElementById('addressinfo').innerText = my_ens_addr
     document.getElementById('addressLink').addEventListener("mouseover",(e)=>{document.getElementById('addressLink').style.color= "rgb(20,33,47)"})
-    document.getElementById('addressLink').addEventListener("mouseleave",(e)=>{document.getElementById('addressLink').style.color= "rgb(0,118,255)"})
+    document.getElementById('addressLink').addEventListener("mouseleave",(e)=>{document.getElementById('addressIcon').style.color= "rgb(0,118,255)";document.getElementById('addressinfo').style.color= "rgb(0,118,255)"})
     document.getElementById('twitter').addEventListener("mouseover",(e)=>{document.getElementById('twitterIcon').style.color= "rgb(0,118,255)"})
     document.getElementById('twitter').addEventListener("mouseleave",(e)=>{document.getElementById('twitterIcon').style.color= "rgb(143,149,156)"})
     displayTokenList()
