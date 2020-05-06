@@ -13,7 +13,7 @@ window.onload = async ()=>{
     authereum = new Authereum('mainnet')
     provider = authereum.getProvider()
     web3_127 = new Web3(provider)
-    console.log(web3_127.version)
+    console.log(`web3.js version is ${web3_127.version}`)
     document.getElementById('reg').style.visibility = "visible"
     document.getElementById('navtxt').innerText = "STARTボタンを押してユーザ登録(完全無料)"
 
