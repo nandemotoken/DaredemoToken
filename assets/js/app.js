@@ -123,7 +123,7 @@ const make_token = async ()=>{
 }
 }
 
-const send_token = (tokenContractAddress)=> {
+const send_token = async (tokenContractAddress)=> {
     const tokenqty = window.prompt("トークンをいくつ送りますか")
     if (!tokenqty) return;
     const tokenTo = window.prompt("トークンの送り先アドレスを貼り付けてください")
