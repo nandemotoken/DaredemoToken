@@ -171,5 +171,11 @@ const twitterLink = () => {
 }
 
 const ensaddress = () => {
-    window.alert("ens")
+    const addarea = document.createElement("textarea");
+    addarea.textContent = my_ens_addr
+    document.getElementsByTagName("body")[0].appendChild(addarea)
+    addarea.select()
+    document.execCommand("copy")
+    document.getElementsByTagName("body")[0].removeChild(addarea)
+    window.alert("クリップボードにアドレスをコピーしました")
 }
