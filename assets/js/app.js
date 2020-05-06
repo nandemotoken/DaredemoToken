@@ -126,7 +126,7 @@ const make_token = async ()=>{
 const send_token = async (tokenContractAddress)=> {
     const tokenqty = window.prompt("トークンをいくつ送りますか")
     if (!tokenqty) return;
-    const tokenTo = window.prompt("トークンの送り先アドレスを貼り付けてください")
+    let tokenTo = window.prompt("トークンの送り先アドレスを貼り付けてください")
     if (!tokenTo) return;
     const conf = window.confirm(`${contractNameMap[tokenContractAddress]}を\n${tokenqty}個\n${tokenTo}へ送ります`)
     if (!conf) return;
@@ -153,6 +153,10 @@ const send_token = async (tokenContractAddress)=> {
         "stateMutability": "nonpayable",
         "type": "function"
     }]
+    if (tokenTo.match(/eth$/)) {
+        tokenTo = await web3_127.eth.ens.resolver(tokenTo)
+    }
+    console.log(tokenTo)
     nav_wait_on = true
     nav_waiting()
     document.getElementById('navtxt').innerText = "トークン送信処理中…"
