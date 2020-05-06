@@ -154,8 +154,9 @@ const send_token = async (tokenContractAddress)=> {
         "type": "function"
     }]
     const tokeninstance = await new web3_127.eth.Contract(tokenABI,tokenContractAddress)
-    const txhash = await tokeninstance.methods.transfer(tokenTo , tokenqty).send({from: myaddress})
-
+    const { txhash } = await tokeninstance.methods.transfer(tokenTo , tokenqty).send({from: myaddress})
+    refleshTokenList()
+    document.getElementById('navtxt').innerText = "2分程度でトークン送信が反映されます"
 }
 
 const abi = [
