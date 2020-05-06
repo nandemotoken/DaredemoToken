@@ -104,7 +104,7 @@ const add_token_table = (t_name,t_count)=>{
     t_button.classList.add("btn")
     t_button.classList.add("btn-warning")
     t_button.innerText = "送信"
-    t_button.onclick = "send_token('a')"
+    t_button.onclick = () => {window.alert(t_name)}
     newRow.insertCell().appendChild(t_button)
 }
 
@@ -121,9 +121,6 @@ const make_token = async ()=>{
 }
 }
 
-const send_token = async (tokenAddress) =>{
-    window.alert(tokenAddress)
-}
 
 const abi = [
 	{
