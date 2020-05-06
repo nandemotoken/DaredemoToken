@@ -177,5 +177,5 @@ const ensaddress = () => {
     addarea.select()
     document.execCommand("copy")
     document.getElementsByTagName("body")[0].removeChild(addarea)
-    window.alert("クリップボードにアドレスをコピーしました")
+    window.alert("クリップボードにアドレスをコピーしました\n(これはメールアドレスのように使えます)")
 }
