@@ -16,6 +16,9 @@ window.onload = async ()=>{
     console.log(web3_127.version)
     document.getElementById('reg').style.visibility = "visible"
     document.getElementById('navtxt').innerText = "STARTボタンを押してユーザ登録(完全無料)"
+
+    document.getElementById('info').addEventListener("mouseover",(e)=>{document.getElementById('infoIcon').style.color= "rgb(0,118,255)"})
+    document.getElementById('info').addEventListener("mouseleave",(e)=>{document.getElementById('infoIcon').style.color= "rgb(143,149,156)"})    
 }
 
 const start = async () => {
@@ -34,12 +37,10 @@ const start = async () => {
     userinfo = await authereum.authenticate()
     my_ens_addr = userinfo.account.username + '.auth.eth'
     document.getElementById('addressinfo').innerText = my_ens_addr
-    // document.getElementById('address').addEventListener("mouseover",(e)=>{document.getElementById('addressIcon').style.color= "rgb(20,33,47)";document.getElementById('addressinfo').style.color= "rgb(20,33,47)"})
-    // document.getElementById('address').addEventListener("mouseleave",(e)=>{document.getElementById('addressIcon').style.color= "rgb(0,118,255)";document.getElementById('addressinfo').style.color= "rgb(0,118,255)"})
+    document.getElementById('address').addEventListener("mouseover",(e)=>{document.getElementById('addressIcon').style.color= "rgb(20,33,47)";document.getElementById('addressinfo').style.color= "rgb(20,33,47)"})
+    document.getElementById('address').addEventListener("mouseleave",(e)=>{document.getElementById('addressIcon').style.color= "rgb(143,149,156)";document.getElementById('addressinfo').style.color= "rgb(143,149,156)"})
     document.getElementById('twitter').addEventListener("mouseover",(e)=>{document.getElementById('twitterIcon').style.color= "rgb(0,118,255)"})
     document.getElementById('twitter').addEventListener("mouseleave",(e)=>{document.getElementById('twitterIcon').style.color= "rgb(143,149,156)"})
-    document.getElementById('info').addEventListener("mouseover",(e)=>{document.getElementById('infoIcon').style.color= "rgb(0,118,255)"})
-    document.getElementById('info').addEventListener("mouseleave",(e)=>{document.getElementById('infoIcon').style.color= "rgb(143,149,156)"})
     displayTokenList()
 }
 
