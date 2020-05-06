@@ -124,7 +124,11 @@ const make_token = async ()=>{
 }
 
 const send_token = (tokenContractAddress)=> {
-    window.alert(tokenContractAddress)
+    const tokenqty = window.prompt("トークンをいくつ送りますか")
+    if (!tokenqty) return;
+    const tokenTo = window.prompt("トークンの送り先アドレスを貼り付けてください")
+    if (!tokenTo) return;
+    window.alert(`${contractNameMap[tokenContractAddress]}を\n${tokenqty}個\n${tokenTo}へ送ります`)
 }
 
 const abi = [
