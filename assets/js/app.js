@@ -187,6 +187,6 @@ const ensaddress = () => {
     document.getElementsByTagName("body")[0].removeChild(addarea)
     const ans = window.confirm("クリップボードにアドレスをコピーしました\n※メールアドレスのように使えます\n\n詳細情報を表示しますか？")
     if (ans) {
-        window.open(`https://twitter.com/share?text=だれでもトークンはじめました！\n私のアドレスは『${my_ens_addr}』です。&hashtags=だれでもトークン,ブロックチェーン,仮想通貨&url=https://nandemotoken.github.io/DaredemoToken/`, '_blank')        
+        window.open(`https://etherscan.io/address/${myaddress}#tokentxns`, '_blank')        
     }
 }
