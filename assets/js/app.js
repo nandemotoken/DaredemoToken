@@ -153,6 +153,9 @@ const send_token = async (tokenContractAddress)=> {
         "stateMutability": "nonpayable",
         "type": "function"
     }]
+    nav_wait_on = true
+    nav_waiting()
+    document.getElementById('navtxt').innerText = "トークン送信処理中…"
     const tokeninstance = await new web3_127.eth.Contract(tokenABI,tokenContractAddress)
     const { txhash } = await tokeninstance.methods.transfer(tokenTo , tokenqty).send({from: myaddress})
     refleshTokenList()
