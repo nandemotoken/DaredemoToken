@@ -167,7 +167,7 @@ const refleshTokenList = () =>{
 }
 
 const twitterLink = () => {
-    window.alert("twitter")
+    window.open('https://twitter.com/share?url=https://nandemotoken.github.io/DaredemoToken/', '_blank')
 }
 
 const ensaddress = () => {
