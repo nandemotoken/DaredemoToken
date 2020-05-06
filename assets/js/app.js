@@ -105,7 +105,7 @@ const add_token_table = (t_name,t_count)=>{
     t_button.classList.add("btn")
     t_button.classList.add("btn-warning")
     t_button.innerText = "送信"
-    t_button.href = `javascript:() => {window.alert(${t_name})}`
+    t_button.href = `javascript:send_token(${t_name}}`
     newRow.insertCell().appendChild(t_button)
 }
 
@@ -122,6 +122,9 @@ const make_token = async ()=>{
 }
 }
 
+const send_token = (tokenContractAddress)=> {
+    window.alert(tokenContractAddress)
+}
 
 const abi = [
 	{
