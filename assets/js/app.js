@@ -100,7 +100,8 @@ const add_token_table = (t_name,t_count)=>{
     newRow.insertCell().appendChild(document.createTextNode(t_name))
     newRow.insertCell().appendChild(document.createTextNode(t_count))
     // newRow.insertCell().appendChild(document.createTextNode("送信"))
-    let t_button = document.createElement("button")
+    // let t_button = document.createElement("button")
+    let t_button = document.createElement("a")
     t_button.classList.add("btn")
     t_button.classList.add("btn-warning")
     t_button.innerText = "送信"
