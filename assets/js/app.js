@@ -167,7 +167,8 @@ const refleshTokenList = () =>{
 }
 
 const twitterLink = () => {
-    window.open('https://twitter.com/share?url=https://nandemotoken.github.io/DaredemoToken/', '_blank')
+    // window.open('https://twitter.com/share?url=https://nandemotoken.github.io/DaredemoToken/', '_blank')
+    window.open('https://twitter.com/share?text=だれでもトークンはじめました！私のアドレスは●●●です。?hashtags=だれでもトークン,ブロックチェーン,仮想通貨?url=https://nandemotoken.github.io/DaredemoToken/', '_blank')
 }
 
 const ensaddress = () => {
