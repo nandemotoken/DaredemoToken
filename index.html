@@ -11,6 +11,10 @@
     <link rel="icon" type="image/png" sizes="200x200" href="assets/img/DaredemoToken_icon.png">
     <link rel="icon" type="image/png" sizes="200x200" href="assets/img/DaredemoToken_icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
@@ -29,8 +33,12 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col align-self-center"><img src="assets/img/Daredemotoken_banner2.png" width="100%"></div>
-            <div class="col text-center align-self-center"><select><optgroup label="モード変更"><option value="12" selected="">基本モード</option><option value="13">Commig soon</option></optgroup></select></div>
+            <div class="col-7 align-self-center"><img src="assets/img/Daredemotoken_banner2.png" width="100%"></div>
+            <div class="col-5 text-center m-auto" style="margin-right: 0px;margin-left: 0px;">
+                <div class="d-inline-block" id="twitter" style="margin-left: 20px; visibility:hidden;"><a href="#"><i class="icon ion-social-twitter" style="font-size: 200%;"></i></a></div>
+                <div class="d-inline-block" id="address" style="margin-left: 20px; visibility:hidden;"><a href="#"><i class="fab fa-ethereum" style="font-size: 200%;"></i><label>&nbsp;Address</label></a></div>
+                <div class="d-inline-block" id="info" style="margin-left: 20px;"><a href="#"><i class="fa fa-question" style="font-size: 200%;"></i></a></div>
+            </div>
         </div>
         <div class="row">
             <div class="col text-center align-self-center"><img id="reg" src="assets/img/button_start1.png" width="100%" onclick="start()" style="visibility:hidden;"></div>
