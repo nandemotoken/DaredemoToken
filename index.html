@@ -35,35 +35,35 @@
         <div class="row">
             <div class="col-7 align-self-center"><img src="assets/img/Daredemotoken_banner2.png" width="100%"></div>
             <div class="col-5 text-right m-auto" style="margin-right: 0px;margin-left: 0px;">
-                <div class="d-inline-block" id="address" style="margin-left: 20px; visibility:hidden;"><a id="addressLink" href="javascript: ensaddress()" style="color: rgb(143,149,156);"><i class="fab fa-ethereum" style="font-size: 200%;"></i><label id="addressinfo">&nbsp;Address</label></a></div>
-                <div class="d-inline-block" id="twitter"
-                    style="margin-left: 20px; visibility:hidden;"><a href="javascript:twitterLink()"><i class="icon ion-social-twitter" id="twitterIcon" style="font-size: 200%;color: rgb(143,149,156);"></i></a></div>
-                <div class="d-inline-block" id="info" style="margin-left: 20px;"><a href="http://www.nandemotoken.com" target="_blank"><i class="fa fa-question" style="font-size: 200%;color: rgb(143,149,156);"></i></a></div>
+                <div class="d-inline-block" id="address" style="margin-left: 20px; visibility:hidden;"><a id="addressLink" href="javascript: ensaddress()"><i class="fab fa-ethereum" id="addressIcon" style="font-size: 200%; color: rgb(143,149,156);"></i><label id="addressinfo" style="color: rgb(143,149,156);">&nbsp;Address</label></a></div>
+                <div
+                    class="d-inline-block" id="twitter" style="margin-left: 20px; visibility:hidden;"><a href="javascript:twitterLink()"><i class="icon ion-social-twitter" id="twitterIcon" style="font-size: 200%;color: rgb(143,149,156);"></i></a></div>
+            <div class="d-inline-block" id="info" style="margin-left: 20px;"><a href="http://www.nandemotoken.com" target="_blank"><i class="fa fa-question" style="font-size: 200%;color: rgb(143,149,156);"></i></a></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center align-self-center"><img id="reg" src="assets/img/button_start1.png" width="100%" onclick="start()" style="visibility:hidden;"></div>
+        <div class="col align-self-center">
+            <form id="token_name_space" style="visibility:hidden;"><label>これから作るトークンの名前</label><input class="form-control" type="text" id="token_name"></form>
+        </div>
+        <div class="col text-center align-self-center"><img id="make" src="assets/img/cooking_sweets_konpeitou.png" width="100%" onclick="make_token()" style="visibility:hidden;"></div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="table-responsive">
+                <table class="table" id="token_table">
+                    <thead>
+                        <tr>
+                            <th>あなたのトークン</th>
+                            <th>保有数</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
             </div>
         </div>
-        <div class="row">
-            <div class="col text-center align-self-center"><img id="reg" src="assets/img/button_start1.png" width="100%" onclick="start()" style="visibility:hidden;"></div>
-            <div class="col align-self-center">
-                <form id="token_name_space" style="visibility:hidden;"><label>これから作るトークンの名前</label><input class="form-control" type="text" id="token_name"></form>
-            </div>
-            <div class="col text-center align-self-center"><img id="make" src="assets/img/cooking_sweets_konpeitou.png" width="100%" onclick="make_token()" style="visibility:hidden;"></div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="table-responsive">
-                    <table class="table" id="token_table">
-                        <thead>
-                            <tr>
-                                <th>あなたのトークン</th>
-                                <th>保有数</th>
-                                <th>操作</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+    </div>
     </div>
     <div style="position: absolute; bottom: 0px; right: 0px; height: 20%; width: 100%">
         <div style="position: fixed; bottom: 0px; left: 0px; width: 80%;">
