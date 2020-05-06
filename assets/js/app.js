@@ -170,3 +170,6 @@ const twitterLink = () => {
     window.alert("twitter")
 }
 
+const ensaddress = () => {
+    window.alert("ens")
+}
