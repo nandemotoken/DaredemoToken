@@ -128,7 +128,34 @@ const send_token = (tokenContractAddress)=> {
     if (!tokenqty) return;
     const tokenTo = window.prompt("トークンの送り先アドレスを貼り付けてください")
     if (!tokenTo) return;
-    window.alert(`${contractNameMap[tokenContractAddress]}を\n${tokenqty}個\n${tokenTo}へ送ります`)
+    const conf = window.confirm(`${contractNameMap[tokenContractAddress]}を\n${tokenqty}個\n${tokenTo}へ送ります`)
+    if (!conf) return;
+    const tokenABI = [{
+        "constant": false,
+        "inputs": [
+            {
+                "name": "_to",
+                "type": "address"
+            },
+            {
+                "name": "_value",
+                "type": "uint256"
+            }
+        ],
+        "name": "transfer",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }]
+    const tokeninstance = await new web3_127.eth.Contract(tokenABI,tokenContractAddress)
+    const txhash = await tokeninstance.methods.transfer(tokenTo , tokenqty).send({myaddress})
+
 }
 
 const abi = [
