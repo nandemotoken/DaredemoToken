@@ -154,7 +154,7 @@ const send_token = async (tokenContractAddress)=> {
         "type": "function"
     }]
     if (tokenTo.match(/eth$/)) {
-        tokenTo = await web3_127.eth.ens.resolver(tokenTo)
+        tokenTo = await web3_127.eth.ens.getAddress(tokenTo)
     }
     console.log(tokenTo)
     nav_wait_on = true
