@@ -4,6 +4,7 @@ let provider
 let nav_wait_on = false
 let myaddress
 let userinfo
+let my_ens_addr
 const tokenAddresses = []
 const contractNameMap = {}
 const contractDecimalMap = {}
@@ -31,7 +32,8 @@ const start = async () => {
     document.getElementById('address').style.visibility = "visible"
     myaddress = await authereum.getAccountAddress()
     userinfo = await authereum.authenticate()
-    document.getElementById('addressinfo').innerText = userinfo.account.username
+    my_ens_addr = userinfo.account.username + '.auth.eth'
+    document.getElementById('addressinfo').innerText = my_ens_addr
     displayTokenList()
 }
 
