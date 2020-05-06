@@ -102,7 +102,7 @@ const add_token_table = (t_name,t_count)=>{
     // newRow.insertCell().appendChild(document.createTextNode("送信"))
     let t_button = document.createElement("button")
     t_button.classList.add("btn")
-    t_button.classList.add("btn-secondary")
+    t_button.classList.add("btn-warning")
     t_button.innerText = "送信"
     newRow.insertCell().appendChild(t_button)
 }
