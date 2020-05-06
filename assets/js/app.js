@@ -14,6 +14,7 @@ window.onload = async ()=>{
     provider = authereum.getProvider()
     web3_127 = new Web3(provider)
     console.log(`web3.js version is ${web3_127.version}`)
+    console.log(`authereum version is ${authereum.version()}`)
     document.getElementById('reg').style.visibility = "visible"
     document.getElementById('navtxt').innerText = "STARTボタンを押してユーザ登録(完全無料)"
 
@@ -67,7 +68,7 @@ const displayTokenList = async () => {
         // console.log(contractSymbolMap[myTokenContractInfo])
         // console.log(contractDecimalMap[myTokenContractInfo])
         // console.log(g.result/ Math.pow( 10, contractDecimalMap[myTokenContractInfo]) )
-        add_token_table( contractNameMap[myTokenContractInfo] , g.result/ Math.pow( 10, contractDecimalMap[myTokenContractInfo]) )
+        add_token_table( contractNameMap[myTokenContractInfo] , g.result/ Math.pow( 10, contractDecimalMap[myTokenContractInfo]) ,myTokenContractInfo )
     } )
     // t()
 }
@@ -95,7 +96,7 @@ const t = ()=>{
     add_token_table('トークン名',100)
 }
 
-const add_token_table = (t_name,t_count)=>{
+const add_token_table = (t_name, t_count, t_contract)=>{
     let newRow = document.getElementById('token_table').insertRow()
     newRow.insertCell().appendChild(document.createTextNode(t_name))
     newRow.insertCell().appendChild(document.createTextNode(t_count))
@@ -105,7 +106,7 @@ const add_token_table = (t_name,t_count)=>{
     t_button.classList.add("btn")
     t_button.classList.add("btn-warning")
     t_button.innerText = "送信"
-    t_button.href = `javascript:send_token("${t_name}")`
+    t_button.href = `javascript:send_token("${t_contract}")`
     newRow.insertCell().appendChild(t_button)
 }
 
