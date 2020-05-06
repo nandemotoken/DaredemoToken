@@ -34,8 +34,8 @@ const start = async () => {
     userinfo = await authereum.authenticate()
     my_ens_addr = userinfo.account.username + '.auth.eth'
     document.getElementById('addressinfo').innerText = my_ens_addr
-    document.getElementById('twitter').addEventListener("mouseover",(e)=>{alert("a")})
-    document.getElementById('twitter').addEventListener("mouseleave",(e)=>{})
+    document.getElementById('twitter').addEventListener("mouseover",(e)=>{document.getElementById('twitterIcon').style.color= "rgb(0,118,255)"})
+    document.getElementById('twitter').addEventListener("mouseleave",(e)=>{document.getElementById('twitterIcon').style.color= "rgb(143,149,156)"})
     displayTokenList()
 }
 
