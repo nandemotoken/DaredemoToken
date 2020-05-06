@@ -26,6 +26,8 @@ const start = async () => {
     document.getElementById('token_name_space').style.visibility = "visible"
     document.getElementById('navtxt').innerText = "トークン名を入力して作成ボタンを押す"
     document.getElementById('make').style.visibility = "visible"
+    document.getElementById('twitter').style.visibility = "visible"
+    document.getElementById('address').style.visibility = "visible"
     myaddress = await authereum.getAccountAddress()
     displayTokenList()
 }
