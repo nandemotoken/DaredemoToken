@@ -38,6 +38,8 @@ const start = async () => {
     // document.getElementById('address').addEventListener("mouseleave",(e)=>{document.getElementById('addressIcon').style.color= "rgb(0,118,255)";document.getElementById('addressinfo').style.color= "rgb(0,118,255)"})
     document.getElementById('twitter').addEventListener("mouseover",(e)=>{document.getElementById('twitterIcon').style.color= "rgb(0,118,255)"})
     document.getElementById('twitter').addEventListener("mouseleave",(e)=>{document.getElementById('twitterIcon').style.color= "rgb(143,149,156)"})
+    document.getElementById('info').addEventListener("mouseover",(e)=>{document.getElementById('infoIcon').style.color= "rgb(0,118,255)"})
+    document.getElementById('info').addEventListener("mouseleave",(e)=>{document.getElementById('infoIcon').style.color= "rgb(143,149,156)"})
     displayTokenList()
 }
 
