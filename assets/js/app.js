@@ -3,6 +3,7 @@ let authereum
 let provider
 let nav_wait_on = false
 let myaddress
+let userinfo
 const tokenAddresses = []
 const contractNameMap = {}
 const contractDecimalMap = {}
@@ -29,6 +30,8 @@ const start = async () => {
     document.getElementById('twitter').style.visibility = "visible"
     document.getElementById('address').style.visibility = "visible"
     myaddress = await authereum.getAccountAddress()
+    userinfo = await authereum.authenticate()
+    document.getElementById('address').style.visibility.innerText = userinfo.account.username
     displayTokenList()
 }
 
