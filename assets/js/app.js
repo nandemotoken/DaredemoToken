@@ -102,16 +102,16 @@ const add_token_table = (t_name,t_count)=>{
     // newRow.insertCell().appendChild(document.createTextNode("送信"))
     // let t_button = document.createElement("button")
     let t_button = document.createElement("a")
-    // t_button.classList.add("btn")
-    // t_button.classList.add("btn-warning")
+    t_button.classList.add("btn")
+    t_button.classList.add("btn-warning")
     t_button.innerText = "送信"
     t_button.href = `javascript:send_token("${t_name}")`
     newRow.insertCell().appendChild(t_button)
 }
 
 const delete_token_table = () => {
-    while( document.getElementById('token_table').rows.length > 1 ){
-    document.getElementById('token_table').deleteRow(1)
+    while( document.getElementById('token_table').rows.length > 0 ){
+    document.getElementById('token_table').deleteRow(0)
 }
 }
 
