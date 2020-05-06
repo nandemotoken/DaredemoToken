@@ -31,7 +31,7 @@ const start = async () => {
     document.getElementById('address').style.visibility = "visible"
     myaddress = await authereum.getAccountAddress()
     userinfo = await authereum.authenticate()
-    document.getElementById('address').style.visibility.innerText = userinfo.account.username
+    document.getElementById('addressinfo').innerText = userinfo.account.username
     displayTokenList()
 }
 
