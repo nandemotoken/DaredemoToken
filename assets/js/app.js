@@ -175,7 +175,7 @@ const send_token = async (tokenContractAddress)=> {
     document.getElementById('navtxt').innerText = "2分程度でトークン送信が反映されます"
     setTimeout(()=>{
         document.getElementById('navtxt').innerText = "作成したトークンを他の人にも送ってみましょう！"
-    },12000)
+    },30000)
     nav_wait_on = false
 }
 
