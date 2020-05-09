@@ -120,10 +120,16 @@ const delete_token_table = () => {
 }
 
 const make_token = async ()=>{
-    let ans = window.confirm(`${document.getElementById('token_name').value}を作成します`)
+    let ans = window.confirm(`${document.getElementById('TokenName').innerText}を作成します`)
     if  (ans) {
-    await makeToken( document.getElementById('token_name').value , "DT" )
-}
+        nav_wait_on = true
+        nav_waiting()
+        window.alert(`トークン作成には2分ほど時間がかかります。\n作成中のトークンのことをtwitterで知らせましょう！`)
+        window.open(`https://twitter.com/share?text=だれでもトークンはじめました！\n私のアドレスは『${my_ens_addr}』です。\n${document.getElementById('TokenName').innerText}を作成中です。&hashtags=だれでもトークン,ブロックチェーン,仮想通貨&url=https://nandemotoken.github.io/DaredemoToken/`, '_blank')
+        await makeToken( document.getElementById('token_name').value , document.getElementById('token_Symbol').value )
+        document.getElementById('navtxt').innerText = "トークン完成までお待ちください…"
+        nav_wait_on = false
+    }
 }
 
 const send_token = async (tokenContractAddress)=> {
