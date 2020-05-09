@@ -125,10 +125,9 @@ const make_token = async ()=>{
         nav_wait_on = true
         nav_waiting()
         window.alert(`トークン作成には2分ほど時間がかかります。\n作成中のトークンのことをtwitterで知らせましょう！`)
-        window.open(`https://twitter.com/share?text=だれでもトークンはじめました！\n私のアドレスは『${my_ens_addr}』です。\n${document.getElementById('TokenName').innerText}を作成中です。&hashtags=だれでもトークン,ブロックチェーン,仮想通貨&url=https://nandemotoken.github.io/DaredemoToken/`, '_blank')
+        window.open(`https://twitter.com/share?text=だれでもトークンはじめました！\n私のアドレスは『${my_ens_addr}』\n${document.getElementById('TokenName').innerText}を作成中です。&hashtags=だれでもトークン,ブロックチェーン,仮想通貨&url=https://nandemotoken.github.io/DaredemoToken/`, '_blank')
         await makeToken( document.getElementById('token_name').value , document.getElementById('token_Symbol').value )
         document.getElementById('navtxt').innerText = "トークン完成までお待ちください…"
-        nav_wait_on = false
     }
 }
 
@@ -220,6 +219,7 @@ const makeDT = () => {
 const makeToken = async ( name , symbol ) => {
     await createToken( name , symbol )
     refleshTokenList()
+    nav_wait_on = false
     document.getElementById('navtxt').innerText = "2分ほど待つと作成したトークンが画面に反映されます"
 }
 
