@@ -20,6 +20,9 @@ window.onload = async ()=>{
 
     document.getElementById('info').addEventListener("mouseover",(e)=>{document.getElementById('infoIcon').style.color= "rgb(0,118,255)"})
     document.getElementById('info').addEventListener("mouseleave",(e)=>{document.getElementById('infoIcon').style.color= "rgb(143,149,156)"})    
+
+    document.getElementById(token_name).addEventListener('change',()=>{changeTokenName()})
+    document.getElementById(token_Symbol).addEventListener('change',()=>{changeTokenName()})
 }
 
 const start = async () => {
@@ -241,8 +244,7 @@ const ensaddress = () => {
 }
 
 const changeTokenName = () =>{
-    document.getElementById("TokenName").innerText = "a"
-
+    document.getElementById("TokenName").innerText = `${document.getElementById("token_name")}(${document.getElementById("token_Symbol")})`
 }
 
 
