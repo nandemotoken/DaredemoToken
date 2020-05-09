@@ -244,7 +244,7 @@ const ensaddress = () => {
 }
 
 const changeTokenName = () =>{
-    document.getElementById("TokenName").innerText = `${document.getElementById("token_name")}(${document.getElementById("token_Symbol")})`
+    document.getElementById("TokenName").innerText = `${document.getElementById("token_name").value}(${document.getElementById("token_Symbol").value})`
 }
 
 
