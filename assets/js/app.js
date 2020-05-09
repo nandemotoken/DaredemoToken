@@ -128,6 +128,7 @@ const make_token = async ()=>{
         window.open(`https://twitter.com/share?text=だれでもトークンはじめました！\n私のアドレスは『${my_ens_addr}』\n${document.getElementById('TokenName').innerText}を作成中です。&hashtags=だれでもトークン,ブロックチェーン,仮想通貨&url=https://nandemotoken.github.io/DaredemoToken/`, '_blank')
         await makeToken( document.getElementById('token_name').value , document.getElementById('token_Symbol').value )
         document.getElementById('navtxt').innerText = "トークン完成までお待ちください…"
+        
     }
 }
 
@@ -172,6 +173,9 @@ const send_token = async (tokenContractAddress)=> {
     const { txhash } = await tokeninstance.methods.transfer(tokenTo , tokenqty).send({from: myaddress})
     refleshTokenList()
     document.getElementById('navtxt').innerText = "2分程度でトークン送信が反映されます"
+    setTimeout(()=>{
+        document.getElementById('navtxt').innerText = "作成したトークンを他の人にも送ってみましょう！"
+    },12000)
     nav_wait_on = false
 }
 
@@ -224,7 +228,7 @@ const makeToken = async ( name , symbol ) => {
 }
 
 const refleshTokenList = () =>{
-    for (let i in [6,12,18,24,36,48,60]){
+    for (let i in [6,12,18,24,30,36,42,48,54,60]){
         setTimeout(() => {
             displayTokenList()
         }, i*5000);        
