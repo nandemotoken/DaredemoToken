@@ -110,6 +110,7 @@ const add_token_table = (t_name, t_count, t_contract)=>{
     t_button.classList.add("btn-warning")
     t_button.innerText = "送信"
     t_button.href = `javascript:send_token("${t_contract}")`
+    t_button.addEventListener("click", send_token(`"${t_contract}"`))
     newRow.insertCell().appendChild(t_button)
 }
 
