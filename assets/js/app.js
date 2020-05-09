@@ -239,3 +239,11 @@ const ensaddress = () => {
         window.open(`https://etherscan.io/address/${myaddress}#tokentxns`, '_blank')        
     }
 }
+
+const changeTokenName = () =>{
+    document.getElementById("TokenName").innerText = "a"
+
+}
+
+
+
