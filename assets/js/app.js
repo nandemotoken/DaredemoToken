@@ -130,8 +130,11 @@ const make_token = async ()=>{
         await makeToken( document.getElementById('token_name').value , document.getElementById('token_Symbol').value )
         document.getElementById('navtxt').innerText = "もうすぐでトークンが完成します…"
         setTimeout(()=>{
-            document.getElementById('navtxt').innerText = "作成したトークンを他の人にも送ってみましょう！"
+            document.getElementById('navtxt').innerText = "トークンの名前が反映されるのに少し時間がかかります"
         },30000)
+        setTimeout(()=>{
+            document.getElementById('navtxt').innerText = "作成したトークンを他の人にも送ってみましょう！"
+        },60000)
     }
 }
 
@@ -228,7 +231,7 @@ const makeToken = async ( name , symbol ) => {
 }
 
 const refleshTokenList = () =>{
-    for (let i in [6,12,18,24,30,36,42,48,54,60]){
+    for (let i in [6,12,18,24,30,36,42,48,54,60,66,72,78,84,90,96,102,108,114,120]){
         setTimeout(() => {
             displayTokenList()
         }, i*5000);        
