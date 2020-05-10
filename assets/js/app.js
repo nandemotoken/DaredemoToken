@@ -126,7 +126,7 @@ const make_token = async ()=>{
         nav_waiting()
         window.alert(`トークン作成には2分ほど時間がかかります。\n作成中のトークンのことをtwitterで知らせましょう！`)
         window.open(`https://twitter.com/share?text=だれでもトークンはじめました！\n私のアドレスは『${my_ens_addr}』\n${document.getElementById('TokenName').innerText}を作成中です。&hashtags=だれでもトークン,ブロックチェーン&url=https://nandemotoken.github.io/DaredemoToken/`, '_blank')
-        document.getElementById('navtxt').innerText = "ブロックチェーン処理途中は右上に文字が出ます。そのまま2分ほどお待ちください…"
+        document.getElementById('navtxt').innerText = "ブロックチェーン処理途中は右上に文字が出ます。\nそのまま2分ほどお待ちください…"
         await makeToken( document.getElementById('token_name').value , document.getElementById('token_Symbol').value )
         document.getElementById('navtxt').innerText = "もうすぐでトークンが完成します…"
         setTimeout(()=>{
